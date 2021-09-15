@@ -1,0 +1,354 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+*,
+*::after,
+*::before{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    border: 0;
+}
+
+a{
+    text-decoration: none;
+    color: #4D4959;
+
+}
+
+li{
+    list-style: none;
+}
+
+body{
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    line-height: 2;
+    color: #4D4959;
+    min-height: 100%;
+}
+
+.wrapper{
+    overflow: hidden;
+}
+
+.header{
+    min-height: 100vh;
+    background-image: url(../img/bgfs.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.menu{
+    padding-top: 35px;
+    transition: all .5s;
+}
+
+.menu ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* position: relative; */
+}
+
+.menu li a{
+    font-size:13px;
+    color:#4D4959;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 5px;
+}
+
+.menu li{
+    /* margin-right: 80px; */
+    padding: 0 40px;
+    position: relative;
+}
+
+.menu .logo{
+    padding: 0 20px;
+}
+
+.menu li::after{
+    content: "";
+    width: 5px;
+    height: 5px;
+    background-color: #76757a;
+    
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    right: 0;
+}
+
+.menu li:last-child::after{
+    display: none;
+}
+
+.menu li:nth-child(2)::after,
+.menu li:nth-child(3)::after{
+    /* background-color: #EAEAF2; */
+    /* opacity: 0; */
+    background-color: transparent;
+}
+
+.icon{
+    display: none;
+    position: absolute;
+}
+
+
+/* -------------------------------------- */
+
+
+.item{
+    background-color: #F7F7F7;
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
+
+}
+.item p{
+    max-width: 1080px;
+    color: #848789;
+    font-size: 18px;
+    margin: 0 auto ;
+    padding-bottom: 142px;
+
+
+}
+
+section.item1 img{
+    padding: 118px 0 35px 0;
+    
+}
+.item h1, .item h2 {
+    font-style: 18px;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding-bottom: 35px;
+    letter-spacing: 5px;
+
+}
+
+
+/*Да здраствует JS и ES6*/
+/*Господа пожалуйста не редактируйте этот код, он - пример*/
+
+/* ----------------------------- */
+.brend{
+    padding: 0;
+}
+
+.row{
+    display: flex;
+}
+.column{
+    flex: 0 1 33.333%;
+}
+
+.column_big{
+    flex: 0 1 66.667%;
+}
+
+.column_big a{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background-color: #64c29ec9;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: .5s;
+}
+
+.column_big:hover a{
+    opacity: 1;
+    visibility: visible;
+}
+
+.row1 .column_big{
+    background-image: url("../img/fonImg1.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.row1 .column .brend_image{
+    background-image: url("../img/fonImg4.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 0 0 37.98% 0;
+}
+
+.column .item_j p::after{
+    content: "";
+    display: block;
+    width: 51px;
+    height: 2px;
+    background-color: #353738;
+    margin: 35px auto 0 auto;
+}
+
+.column .item_j{
+    background-color: #fff;
+    padding-top: 70px;  
+    position: relative; 
+}
+
+.column .item_j p{
+    padding-bottom: 50px;
+}
+
+.column .item_j::after{
+    content: "";
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 11px 11px 0 11px;
+    border-color: #fff transparent transparent transparent;
+    position: absolute;
+    left: 50%;
+    bottom: -11px;
+    transform: translateX(-50%);
+}
+/* --------------------row2 */
+.row2 .column_big{
+    background-image: url("../img/fonImg2.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.row2 .column .brend_image{
+    background-image: url("../img/fonImg5.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 0 0 37.98% 0;
+}
+
+/* ---------------------------- */
+.slider .slider_item{
+    padding: 55px 0;
+    
+}
+
+.slider .slider_item img{
+    display: inline-block;
+}
+
+/* ----------------------- */
+@media (max-width: 767px){
+    .menu{
+        background-color: #4D4959;
+        opacity: 0.8;
+        position: absolute;
+        top: -100%;
+        width: 100%;
+        z-index: 10;
+    }
+
+    .menu.active{
+        top: 0;
+    }
+
+    .menu.active + .icon span,
+    .menu.active + .icon::before,
+    .menu.active + .icon::after{
+        background-color: #fff;
+    }
+
+    .icon{
+        display: block;
+        width: 45px;
+        height: 45px;
+        top: 40px;
+        right: 40px;
+        z-index: 15;
+        transition: all 0.5s;
+    }
+
+
+    .icon::before, .icon::after{
+        content: "";
+    }
+
+
+    .icon span, .icon::before, .icon::after{
+        width: 100%;
+        height: 15%;
+        background-color: #4D4959;
+        position: absolute;
+    }
+
+    .icon::before{
+        top: 0;
+    }
+
+    .icon::after{
+        bottom: 0;
+    }
+
+    .icon span{
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .icon.active span{
+        display: none;
+    }
+
+    .icon.active::after{
+        transform: rotate(45deg);
+        top: 50%;
+    }
+
+    .icon.active::before{
+        transform: rotate(-45deg);
+        top: 50%;
+    }
+
+    .menu ul{
+        flex-direction: column;
+    }
+    .menu .logo{
+        order: -1;
+        padding-bottom: 40px;
+    }
+    .menu li{
+        /* margin-right: 80px; */
+        padding: 0 0 40px 0;
+        position: relative;
+    }
+    .menu li a{
+        font-size:26px;
+        color: #EAEAF2;
+    }
+    .menu li::after{        
+        background-color: #EAEAF2;       
+        border-radius: 50%;
+        position: absolute;
+        top: 65%;
+        right: 50%;
+    }
+
+    .menu li:nth-child(2)::after{
+    background-color: #EAEAF2;
+    }
+    .row{
+        flex-direction: column;
+    }
+    .column_big a{
+        padding: 25% 0;
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .row2 .column_big{
+        order: -1;
+    }
+}
